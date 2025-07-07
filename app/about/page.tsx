@@ -1,5 +1,7 @@
 'use client';
 
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -43,13 +45,52 @@ export default function About() {
     }
   ];
 
+function TimelineZigzagItem({
+  milestone,
+  align
+}: {
+  milestone: { year: string; event: string };
+  align: 'left' | 'right';
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6 }}
+      className={`relative mb-16 pl-10 md:pl-16 ${align === 'right' ? 'md:ml-auto md:pr-16' : ''} max-w-xl`}
+    >
+      {/* Curve Line */}
+      <div className="absolute -left-2 top-2 w-4 h-4 rounded-full bg-white border-4 border-blue-600 shadow-md"></div>
+      <div
+        className={`absolute hidden md:block top-2 h-10 w-10 border-t-2 border-blue-300 rounded-tl-full ${
+          align === 'right' ? '-left-10 rotate-180' : '-left-10'
+        }`}
+      ></div>
+
+      <div
+        className={`bg-white rounded-lg shadow-md p-6 ${
+          align === 'right' ? 'md:text-right' : ''
+        }`}
+      >
+        <h3 className="text-blue-700 font-semibold text-lg">{milestone.year}</h3>
+        <p className="text-gray-700">{milestone.event}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+
   const milestones = [
-    { year: "2015", event: "Foundation established with initial focus on education" },
-    { year: "2017", event: "Launched healthcare outreach program" },
-    { year: "2019", event: "Expanded to serve 5 communities" },
-    { year: "2020", event: "Adapted services for pandemic response" },
-    { year: "2022", event: "Reached 5,000 people helped milestone" },
-    { year: "2024", event: "Opened permanent community center" }
+    { year: "2019", event: "Foundation established with initial focus on education" },
+    { year: "2020", event: "Launched healthcare outreach program" },
+    { year: "2021", event: "Expanded to serve 5 communities" },
+    { year: "2022", event: "Adapted services for pandemic response" },
+    { year: "2023", event: "Reached 5,000 people helped milestone" },
+    { year: "2025", event: "Opened permanent community center" }
   ];
 
   return (
@@ -119,23 +160,23 @@ export default function About() {
         </div>
       </section>
 
-      {/* History & Achievements */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">Our Journey</h2>
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="w-20 text-blue-600 font-bold text-lg">{milestone.year}</div>
-                  <div className="w-4 h-4 bg-blue-600 rounded-full mx-6"></div>
-                  <div className="flex-1 text-gray-700">{milestone.event}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+{/* History & Achievements */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto relative">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-16">
+        Our Journey
+      </h2>
+
+      <div className="relative border-l-2 border-blue-200 ml-4">
+        {milestones.map((milestone, index) => (
+          <TimelineZigzagItem key={index} milestone={milestone} align={index % 2 === 0 ? 'left' : 'right'} />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Team Section */}
       <section className="py-16 bg-white">

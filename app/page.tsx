@@ -1,6 +1,6 @@
 
 'use client';
-
+import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ImageCarousel from '../components/ImageCarousel';
@@ -25,10 +25,9 @@ export default function Home() {
             </p>
             <div className="space-x-4">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors cursor-pointer whitespace-nowrap">
+        <Link href="/donate">
                 Get Involved
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors cursor-pointer whitespace-nowrap">
-                Learn More
+              </Link>
               </button>
             </div>
           </div>
@@ -40,75 +39,88 @@ export default function Home() {
       <CounterSection />
       <VolunteerCTA />
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Stories of Impact
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Hear from those whose lives have been touched by our foundation's work
+{/* Testimonials Section */}
+{/* Testimonials Section */}
+<section className="py-24 bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        Stories of Impact
+      </h2>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Hear from those whose lives have been touched by our foundation's work
+      </p>
+    </div>
+
+    {/* Horizontal Scroll with scrollbar hidden */}
+    <div className="overflow-x-auto scrollbar-hide">
+      <div className="flex gap-6 md:gap-10 px-2 md:px-4 scroll-smooth pb-2">
+        {[
+          {
+            name: "Maria Rodriguez",
+            role: "Community Member",
+            image:
+              "https://readdy.ai/api/search-image?query=Portrait%20of%20smiling%20middle-aged%20woman%20with%20kind%20eyes%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20warm%20expression%20showing%20gratitude%20and%20happiness%2C%20community%20member%20testimonial%20photo&width=200&height=200&seq=testimonial1&orientation=squarish",
+            quote:
+              "The education program helped my children get the support they needed. Now they're both in college, something I never dreamed possible."
+          },
+          {
+            name: "Robert Johnson",
+            role: "Senior Citizen",
+            image:
+              "https://readdy.ai/api/search-image?query=Portrait%20of%20elderly%20man%20with%20gentle%20smile%2C%20wise%20and%20grateful%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20appreciation%20and%20contentment%2C%20senior%20community%20member&width=200&height=200&seq=testimonial2&orientation=squarish",
+            quote:
+              "The volunteers visit me weekly and help with groceries and errands. Their friendship means the world to me."
+          },
+          {
+            name: "Sarah Chen",
+            role: "Volunteer",
+            image:
+              "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20woman%20volunteer%20with%20bright%20smile%2C%20enthusiastic%20and%20caring%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20dedication%20and%20joy%20from%20helping%20others&width=200&height=200&seq=testimonial3&orientation=squarish",
+            quote:
+              "Volunteering here has been the most rewarding experience. Every day I see how small acts of kindness create big changes."
+          },
+          {
+            name: "Aisha Khan",
+            role: "Scholarship Recipient",
+            image:
+              "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20Indian%20girl%20student%20smiling%2C%20thankful%20expression%2C%20simple%20clean%20background%2C%20beneficiary%20testimonial%2C%20school%20uniform&width=200&height=200&seq=testimonial4&orientation=squarish",
+            quote:
+              "With their scholarship, I could complete high school and now study engineering. They believed in me when no one else did."
+          },
+          {
+            name: "Ravi Patel",
+            role: "Local Leader",
+            image:
+              "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20Indian%20man%20with%20bright%20smile%2C%20professional%20headshot%2C%20clean%20background%2C%20community%20leader%20and%20change%20maker&width=200&height=200&seq=testimonial5&orientation=squarish",
+            quote:
+              "Arjuna Foundation helped transform our entire village with clean water, better roads, and health awareness."
+          }
+        ].map((item, idx) => (
+          <div
+            key={idx}
+            className="min-w-[360px] max-w-[360px] bg-blue-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <div className="flex flex-col items-center text-center mb-6">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-white shadow-md"
+              />
+              <h4 className="text-xl font-semibold text-blue-900">{item.name}</h4>
+              <p className="text-sm text-blue-600">{item.role}</p>
+            </div>
+            <p className="text-gray-700 italic text-base leading-relaxed">
+              "{item.quote}"
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20smiling%20middle-aged%20woman%20with%20kind%20eyes%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20warm%20expression%20showing%20gratitude%20and%20happiness%2C%20community%20member%20testimonial%20photo&width=80&height=80&seq=testimonial1&orientation=squarish"
-                  alt="Maria Rodriguez"
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-semibold">Maria Rodriguez</h4>
-                  <p className="text-sm text-gray-600">Community Member</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "The education program helped my children get the support they needed. 
-                Now they're both in college, something I never dreamed possible."
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20elderly%20man%20with%20gentle%20smile%2C%20wise%20and%20grateful%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20appreciation%20and%20contentment%2C%20senior%20community%20member&width=80&height=80&seq=testimonial2&orientation=squarish"
-                  alt="Robert Johnson"
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-semibold">Robert Johnson</h4>
-                  <p className="text-sm text-gray-600">Senior Citizen</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "The volunteers visit me weekly and help with groceries and errands. 
-                Their friendship means the world to me."
-              </p>
-            </div>
-            
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <img
-                  src="https://readdy.ai/api/search-image?query=Portrait%20of%20young%20woman%20volunteer%20with%20bright%20smile%2C%20enthusiastic%20and%20caring%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20dedication%20and%20joy%20from%20helping%20others&width=80&height=80&seq=testimonial3&orientation=squarish"
-                  alt="Sarah Chen"
-                  className="w-12 h-12 rounded-full object-cover mr-4"
-                />
-                <div>
-                  <h4 className="font-semibold">Sarah Chen</h4>
-                  <p className="text-sm text-gray-600">Volunteer</p>
-                </div>
-              </div>
-              <p className="text-gray-700 italic">
-                "Volunteering here has been the most rewarding experience. 
-                Every day I see how small acts of kindness create big changes."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <Footer />
     </div>

@@ -81,15 +81,15 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <p className="flex items-center">
                 <i className="ri-mail-line mr-2"></i>
-                info@arjunafoundation.org
+                arjunafoundation@gmail.com
               </p>
               <p className="flex items-center">
                 <i className="ri-phone-line mr-2"></i>
-                +1 (555) 123-4567
+                8939193883
               </p>
               <p className="flex items-center">
                 <i className="ri-map-pin-line mr-2"></i>
-                123 Hope Street, Community City
+                No.23,Anna Main Rd MGR Nagar Chennai -78
               </p>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function Footer() {
           <h3 className="text-xl font-semibold mb-4">Find Us</h3>
           <div className="bg-gray-800 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095919347!2d-74.00425738459418!3d40.74844077932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1635784296403!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1755.8408925862127!2d80.2017246512173!3d13.03698606842697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267dc412c75e1%3A0xe93758de060ea744!2sBharani%20fitness%20centre!5e0!3m2!1sen!2sin!4v1751910511723!5m2!1sen!2sin"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -110,7 +110,6 @@ export default function Footer() {
             ></iframe>
           </div>
         </div>
-
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Arjuna Foundation. All rights reserved. Making a difference, one life at a time.
