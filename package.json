@@ -2,12 +2,11 @@
   "name": "next-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development next dev -H 0.0.0.0 -p 3000",
-    "build": "next build",
-    "lint": "next lint",
-    "postinstall": "chmod +x node_modules/.bin/next"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+},
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
     "next": "15.3.2",
