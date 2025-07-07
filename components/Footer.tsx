@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
+import Link from 'next/link';
 export default function Footer() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
@@ -112,7 +112,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Arjuna Foundation. All rights reserved. Making a difference, one life at a time.
+            © 2025 Arjuna Foundation. All rights reserved. Developed By  <a href="https://mavx-tech-s42m.vercel.app/">MAVX</a>
           </p>
         </div>
       </div>
