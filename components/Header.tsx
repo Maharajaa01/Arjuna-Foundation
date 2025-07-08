@@ -24,6 +24,9 @@ export default function Header() {
             <Link href="/gallery" className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               Gallery
             </Link>
+            <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              Blog
+            </Link>
             <Link href="/donate" className="text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               Donate
             </Link>
@@ -45,6 +48,9 @@ export default function Header() {
               </Link>
               <Link href="/about" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 cursor-pointer">
                 About Us
+              </Link>
+              <Link href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 cursor-pointer">
+                Blog
               </Link>
               <Link href="/gallery" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 cursor-pointer">
                 Gallery
