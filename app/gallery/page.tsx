@@ -11,7 +11,7 @@ export default function Gallery() {
   const images = [
     {
       id: 1,
-      src: "https://readdy.ai/api/search-image?query=Volunteers%20teaching%20children%20in%20colorful%20classroom%2C%20educational%20activity%20with%20books%20and%20materials%2C%20diverse%20group%20of%20students%20learning%20together%2C%20bright%20inspiring%20environment%2C%20community%20education%20program&width=400&height=300&seq=gallery1&orientation=landscape",
+      src: "gallery/sports1.jpg",
       category: "education",
       title: "Education Program",
       description: "Teaching children in our community learning center"
@@ -25,7 +25,7 @@ export default function Gallery() {
     },
     {
       id: 3,
-      src: "https://readdy.ai/api/search-image?query=Volunteers%20distributing%20food%20packages%20to%20families%2C%20community%20kitchen%20serving%20meals%2C%20people%20helping%20distribute%20groceries%2C%20food%20relief%20program%20showing%20compassion%20and%20community%20support&width=400&height=300&seq=gallery3&orientation=landscape",
+      src: "gallery/food1d.jpg",
       category: "community",
       title: "Food Distribution",
       description: "Weekly food distribution program for families in need"
@@ -39,21 +39,21 @@ export default function Gallery() {
     },
     {
       id: 5,
-      src: "https://readdy.ai/api/search-image?query=Volunteers%20cleaning%20up%20park%20area%2C%20community%20members%20working%20together%20on%20environmental%20cleanup%2C%20people%20picking%20up%20trash%20and%20beautifying%20neighborhood%2C%20environmental%20service%20project&width=400&height=300&seq=gallery5&orientation=landscape",
+      src: "gallery/pongal2.jpg",
       category: "environment",
       title: "Community Cleanup",
       description: "Monthly environmental cleanup initiatives"
     },
     {
       id: 6,
-      src: "https://readdy.ai/api/search-image?query=Adult%20education%20class%20with%20volunteers%20teaching%20literacy%20to%20adults%2C%20diverse%20group%20of%20adult%20learners%20in%20classroom%20setting%2C%20skill%20development%20program%2C%20community%20education%20for%20adults&width=400&height=300&seq=gallery6&orientation=landscape",
+      src: "gallery/sports2.jpg",
       category: "education",
       title: "Adult Literacy Program",
       description: "Empowering adults through education and skill development"
     },
     {
       id: 7,
-      src: "https://readdy.ai/api/search-image?query=Vaccination%20drive%20with%20medical%20volunteers%20giving%20shots%20to%20community%20members%2C%20healthcare%20outreach%20program%2C%20nurses%20providing%20immunizations%20in%20community%20setting%2C%20public%20health%20initiative&width=400&height=300&seq=gallery7&orientation=landscape",
+      src: "gallery/pongal3.jpg",
       category: "healthcare",
       title: "Vaccination Drive",
       description: "Community immunization and health awareness program"
@@ -67,11 +67,19 @@ export default function Gallery() {
     },
     {
       id: 9,
-      src: "https://readdy.ai/api/search-image?query=Volunteers%20visiting%20elderly%20people%20at%20home%2C%20caring%20for%20senior%20citizens%2C%20home%20care%20service%2C%20intergenerational%20bonding%20and%20elderly%20support%20program%20showing%20compassion&width=400&height=300&seq=gallery9&orientation=landscape",
+      src: "gallery/blind0.jpg",
+      category: "community",
+      title: "Elder Care Visits",
+      description: "Regular visits to support isolated elderly community members"
+    },
+        {
+      id: 10,
+      src: "gallery/blind2.jpg",
       category: "community",
       title: "Elder Care Visits",
       description: "Regular visits to support isolated elderly community members"
     }
+    
   ];
 
   const categories = [

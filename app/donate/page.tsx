@@ -17,7 +17,7 @@ export default function Donate() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const predefinedAmounts = ['25', '50', '100', '250', '500'];
+  const predefinedAmounts = ['250', '500', '1000', '2500', '5000'];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,22 +30,22 @@ export default function Donate() {
 
   const impactStories = [
     {
-      amount: '$25',
+      amount: '₹250',
       impact: 'Provides school supplies for 2 children for a month',
       icon: 'ri-book-line'
     },
     {
-      amount: '$50',
+      amount: '₹500',
       impact: 'Feeds a family of 4 for a week',
       icon: 'ri-restaurant-line'
     },
     {
-      amount: '$100',
+      amount: '₹1000',
       impact: 'Covers medical checkup for 5 elderly people',
       icon: 'ri-heart-pulse-line'
     },
     {
-      amount: '$250',
+      amount: '₹2500',
       impact: 'Sponsors a child\'s education for 3 months',
       icon: 'ri-graduation-cap-line'
     }
@@ -122,7 +122,7 @@ export default function Donate() {
                           : 'border-gray-300 text-gray-700 hover:border-blue-600'
                       }`}
                     >
-                      ${amt}
+                      ₹{amt}
                     </button>
                   ))}
                 </div>
@@ -184,7 +184,7 @@ export default function Donate() {
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-colors cursor-pointer whitespace-nowrap"
               >
-                Donate ${customAmount || amount} {donationType === 'monthly' ? '/month' : ''}
+                Donate ₹{customAmount || amount} {donationType === 'monthly' ? '/month' : ''}
               </button>
 
               <p className="text-xs text-gray-500 text-center">
@@ -218,7 +218,7 @@ export default function Donate() {
             </div>
 
             {/* Testimonial */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+            {/* <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">Donor Testimonial</h3>
               <div className="flex items-start">
                 <img
@@ -237,7 +237,14 @@ export default function Donate() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+                          <div>
+                <img
+                  src="/asset/qr1.jpg"
+                  alt="Our Vision"
+                  className="w-full h-82 object-cover object-top rounded-lg"
+                />
+              </div>
 
             {/* Payment Methods */}
             <div className="mt-8">
@@ -246,14 +253,14 @@ export default function Donate() {
                 <div className="w-12 h-8 bg-blue-600 rounded flex items-center justify-center">
                   <span className="text-white text-xs font-bold">VISA</span>
                 </div>
-                <div className="w-12 h-8 bg-red-600 rounded flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">MC</span>
+                <div className="w-14 h-8 bg-red-600 rounded flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">Phonepay</span>
                 </div>
                 <div className="w-12 h-8 bg-blue-500 rounded flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">PP</span>
+                  <span className="text-white text-xs font-bold">Gpay</span>
                 </div>
                 <div className="w-12 h-8 bg-purple-600 rounded flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">RP</span>
+                  <span className="text-white text-xs font-bold">Paytm</span>
                 </div>
               </div>
             </div>

@@ -8,40 +8,40 @@ import Footer from '../../components/Footer';
 export default function About() {
   const teamMembers = [
     {
-      name: "Dr. Priya Sharma",
+      name: "Bhaskaran",
       role: "Founder & President",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20confident%20middle-aged%20Indian%20woman%20doctor%2C%20warm%20smile%2C%20wearing%20professional%20attire%2C%20simple%20clean%20background%2C%20leadership%20and%20compassion%20in%20expression%2C%20medical%20professional&width=300&height=400&seq=team1&orientation=portrait",
-      bio: "Dr. Sharma founded Arjuna Foundation in 2015 with a vision to create sustainable change in underserved communities."
+      image: "volunters/bhasky.jpg",
+      bio: "Bhaskaran founded Arjuna Foundation in 2019 with a vision to create sustainable change in underserved communities."
     },
     {
-      name: "Michael Thompson",
+      name: "Arunachalam",
       role: "Director of Operations",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20confident%20middle-aged%20man%20in%20business%20attire%2C%20friendly%20smile%2C%20simple%20clean%20background%2C%20showing%20leadership%20and%20organizational%20skills%2C%20operations%20manager&width=300&height=400&seq=team2&orientation=portrait",
-      bio: "With 15 years in nonprofit management, Michael ensures our programs run efficiently and effectively."
+      image: "volunters/arunachalam.webp",
+      bio: "With 15 years in nonprofit management, Arnachalam ensures our programs run efficiently and effectively."
     },
     {
-      name: "Lisa Park",
+      name: "Gowtham",
       role: "Community Outreach Coordinator",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20young%20Asian%20woman%20with%20bright%20smile%2C%20wearing%20casual%20professional%20attire%2C%20simple%20clean%20background%2C%20showing%20enthusiasm%20and%20community%20spirit%2C%20outreach%20coordinator&width=300&height=400&seq=team3&orientation=portrait",
+      image: "asset/gowtham.jpg",
       bio: "Lisa connects with local communities to identify needs and develop targeted support programs."
     },
     {
-      name: "David Rodriguez",
+      name: "Pandian",
       role: "Education Program Manager",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20Hispanic%20man%20teacher%20with%20kind%20smile%2C%20wearing%20casual%20professional%20attire%2C%20simple%20clean%20background%2C%20showing%20dedication%20to%20education%20and%20mentoring%2C%20education%20manager&width=300&height=400&seq=team4&orientation=portrait",
-      bio: "David oversees our educational initiatives and scholarship programs for underprivileged students."
+      image: "/volunters/pandian.jpeg",
+      bio: "Pandian oversees our educational initiatives and scholarship programs for underprivileged students."
     },
     {
-      name: "Dr. Amanda Foster",
+      name: "Kannan",
       role: "Healthcare Initiative Lead",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20confident%20woman%20doctor%20with%20stethoscope%2C%20warm%20professional%20smile%2C%20medical%20professional%20attire%2C%20simple%20clean%20background%2C%20showing%20medical%20expertise%20and%20care&width=300&height=400&seq=team5&orientation=portrait",
-      bio: "Dr. Foster leads our mobile health clinics and preventive care programs in rural areas."
+      image: "",
+      bio: "Pandian leads our mobile health clinics and preventive care programs in rural areas."
     },
     {
-      name: "James Wilson",
+      name: "Surya",
       role: "Volunteer Coordinator",
-      image: "https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20friendly%20middle-aged%20man%20with%20welcoming%20smile%2C%20casual%20professional%20attire%2C%20simple%20clean%20background%2C%20showing%20warmth%20and%20community%20leadership%2C%20volunteer%20coordinator&width=300&height=400&seq=team6&orientation=portrait",
-      bio: "James manages our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+      image: "/volunters/surya.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
     }
   ];
 
@@ -150,7 +150,7 @@ function TimelineZigzagItem({
                   growth, health, and prosperity, regardless of their socioeconomic background.
                 </p>
                 <img
-                  src="https://readdy.ai/api/search-image?query=Community%20gathering%20showing%20diverse%20group%20of%20people%20working%20together%2C%20volunteers%20and%20community%20members%20collaborating%2C%20bright%20hopeful%20atmosphere%2C%20simple%20clean%20background%2C%20showing%20unity%20and%20cooperation%20in%20community%20development&width=500&height=300&seq=vision&orientation=landscape"
+                  src="/asset/arjunagroup.JPG"
                   alt="Our Vision"
                   className="w-full h-64 object-cover object-top rounded-lg"
                 />

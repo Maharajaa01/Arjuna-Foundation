@@ -57,7 +57,7 @@ export default function Footer() {
                 <i className="ri-facebook-fill text-lg"></i>
               </a>
               <a
-                href="https://instagram.com/arjunafoundation"
+                href="https://www.instagram.com/arjunafoundation2023"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-pink-600 hover:bg-pink-700 rounded-full flex items-center justify-center transition-colors cursor-pointer"

@@ -31,13 +31,28 @@ export default function Home() {
               </button>
             </div>
           </div>
-          
-          <ImageCarousel />
+{/* Static Banner Section */}
+<section className="py-8 bg-white">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="overflow-hidden rounded-lg shadow-lg">
+      <img
+        src="asset/static-banner.jpg"
+        alt="Arjuna Foundation banner"
+        className="w-full h-auto object-contain sm:object-cover sm:h-[500px] md:h-[600px] lg:h-[800px]"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+    
         </div>
       </section>
 
       <CounterSection />
       <VolunteerCTA />
+          <ImageCarousel />
 
 {/* Testimonials Section */}
 {/* Testimonials Section */}
@@ -56,32 +71,26 @@ export default function Home() {
     <div className="overflow-x-auto scrollbar-hide">
       <div className="flex gap-6 md:gap-10 px-2 md:px-4 scroll-smooth pb-2">
         {[
-          {
-            name: "Maria Rodriguez",
-            role: "Community Member",
-            image:
-              "https://readdy.ai/api/search-image?query=Portrait%20of%20smiling%20middle-aged%20woman%20with%20kind%20eyes%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20warm%20expression%20showing%20gratitude%20and%20happiness%2C%20community%20member%20testimonial%20photo&width=200&height=200&seq=testimonial1&orientation=squarish",
-            quote:
-              "The education program helped my children get the support they needed. Now they're both in college, something I never dreamed possible."
-          },
-          {
-            name: "Robert Johnson",
-            role: "Senior Citizen",
-            image:
-              "https://readdy.ai/api/search-image?query=Portrait%20of%20elderly%20man%20with%20gentle%20smile%2C%20wise%20and%20grateful%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20appreciation%20and%20contentment%2C%20senior%20community%20member&width=200&height=200&seq=testimonial2&orientation=squarish",
-            quote:
-              "The volunteers visit me weekly and help with groceries and errands. Their friendship means the world to me."
-          },
-          {
-            name: "Sarah Chen",
+     {
+            name: "Gowtham",
             role: "Volunteer",
             image:
-              "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20woman%20volunteer%20with%20bright%20smile%2C%20enthusiastic%20and%20caring%20expression%2C%20professional%20headshot%2C%20simple%20clean%20background%2C%20showing%20dedication%20and%20joy%20from%20helping%20others&width=200&height=200&seq=testimonial3&orientation=squarish",
+              "volunters/gowtham.jpg",
             quote:
               "Volunteering here has been the most rewarding experience. Every day I see how small acts of kindness create big changes."
           },
           {
-            name: "Aisha Khan",
+            name: "Ramanathan",
+            role: "Senior Citizen",
+            image:
+            
+              "asset/speciallyabled.jpg",
+            quote:
+              "The volunteers visit me weekly and help with groceries and Gave Me Electric wheelchair. Their friendship means the world to me."
+          },
+      
+          {
+            name: "Aishwarya",
             role: "Scholarship Recipient",
             image:
               "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20Indian%20girl%20student%20smiling%2C%20thankful%20expression%2C%20simple%20clean%20background%2C%20beneficiary%20testimonial%2C%20school%20uniform&width=200&height=200&seq=testimonial4&orientation=squarish",
@@ -89,12 +98,12 @@ export default function Home() {
               "With their scholarship, I could complete high school and now study engineering. They believed in me when no one else did."
           },
           {
-            name: "Ravi Patel",
-            role: "Local Leader",
+            name: "Nantha kumar",
+            role: "Goverment School Principle",
             image:
               "https://readdy.ai/api/search-image?query=Portrait%20of%20young%20Indian%20man%20with%20bright%20smile%2C%20professional%20headshot%2C%20clean%20background%2C%20community%20leader%20and%20change%20maker&width=200&height=200&seq=testimonial5&orientation=squarish",
             quote:
-              "Arjuna Foundation helped transform our entire village with clean water, better roads, and health awareness."
+              "Arjuna Foundation helped transform our entire School with clean water, and health awareness."
           }
         ].map((item, idx) => (
           <div
