@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arjuna Foundation",
+  title: "Arjuna Fooundation",
 };
 
 export default function RootLayout({
