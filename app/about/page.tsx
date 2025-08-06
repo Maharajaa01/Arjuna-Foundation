@@ -34,7 +34,7 @@ export default function About() {
     {
       name: "Kannan",
       role: "Healthcare Initiative Lead",
-      image: "",
+      image:"/volunters/pandian.jpeg",
       bio: "Pandian leads our mobile health clinics and preventive care programs in rural areas."
     },
     {
