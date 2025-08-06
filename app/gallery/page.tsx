@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const images = [
@@ -72,14 +72,13 @@ export default function Gallery() {
       title: "Elder Care Visits",
       description: "Regular visits to support isolated elderly community members"
     },
-        {
+    {
       id: 10,
       src: "gallery/blind2.jpg",
       category: "community",
       title: "Elder Care Visits",
       description: "Regular visits to support isolated elderly community members"
     }
-    
   ];
 
   const categories = [
@@ -90,14 +89,26 @@ export default function Gallery() {
     { id: 'environment', name: 'Environment' }
   ];
 
-  const filteredImages = selectedCategory === 'all' 
-    ? images 
+  const filteredImages = selectedCategory === 'all'
+    ? images
     : images.filter(img => img.category === selectedCategory);
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex - 1 + filteredImages.length) % filteredImages.length);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex((selectedIndex + 1) % filteredImages.length);
+    }
+  };
 
   return (
     <div className="min-h-screen">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="container mx-auto px-4">
@@ -135,11 +146,11 @@ export default function Gallery() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredImages.map(image => (
+            {filteredImages.map((image, index) => (
               <div
                 key={image.id}
                 className="group cursor-pointer"
-                onClick={() => setSelectedImage(image.src)}
+                onClick={() => setSelectedIndex(index)}
               >
                 <div className="relative overflow-hidden rounded-lg shadow-lg">
                   <img
@@ -164,23 +175,43 @@ export default function Gallery() {
       </section>
 
       {/* Lightbox Modal */}
-      {selectedImage && (
+      {selectedIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4 overflow-auto"
+          onClick={() => setSelectedIndex(null)}
         >
-          <div className="relative max-w-4xl max-h-full">
+          <div className="relative max-w-4xl max-h-full mx-auto" onClick={(e) => e.stopPropagation()}>
             <img
-              src={selectedImage}
+              src={filteredImages[selectedIndex].src}
               alt="Gallery Image"
-              className="max-w-full max-h-full object-contain"
+              className="max-w-full max-h-[80vh] object-contain mx-auto"
             />
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center cursor-pointer"
-            >
-              <i className="ri-close-line text-white text-xl"></i>
-            </button>
+
+            {/* Close Button */}
+{/* Close Button */}
+<button
+  onClick={() => setSelectedIndex(null)}
+  className="absolute top-4 right-4 w-10 h-10 bg-white text-black hover:bg-gray-300 rounded-full flex items-center justify-center shadow-lg"
+>
+  <i className="ri-close-line text-xl"></i>
+</button>
+
+{/* Prev Button */}
+<button
+  onClick={handlePrev}
+  className="absolute top-1/2 left-4 transform -translate-y-1/2 w-10 h-10 bg-white text-black hover:bg-gray-300 rounded-full flex items-center justify-center shadow-lg"
+>
+  <i className="ri-arrow-left-s-line text-xl"></i>
+</button>
+
+{/* Next Button */}
+<button
+  onClick={handleNext}
+  className="absolute top-1/2 right-4 transform -translate-y-1/2 w-10 h-10 bg-white text-black hover:bg-gray-300 rounded-full flex items-center justify-center shadow-lg"
+>
+  <i className="ri-arrow-right-s-line text-xl"></i>
+</button>
+
           </div>
         </div>
       )}
