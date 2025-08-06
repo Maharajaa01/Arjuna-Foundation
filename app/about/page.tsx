@@ -6,104 +6,105 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 export default function About() {
-  const teamMembers = [
-    {
-      name: "Bhaskaran",
-      role: "Founder & President",
-      image: "volunters/bhasky.jpg",
-      bio: "Bhaskaran founded Arjuna Foundation in 2019 with a vision to create sustainable change in underserved communities."
-    },
-    {
-      name: "Arunachalam",
-      role: "Director of Operations",
-      image: "volunters/arunachalam.webp",
-      bio: "With 15 years in nonprofit management, Arnachalam ensures our programs run efficiently and effectively."
-    },
-    {
-      name: "Gowtham",
-      role: "Community Outreach Coordinator",
-      image: "asset/gowtham.jpg",
-      bio: "Lisa connects with local communities to identify needs and develop targeted support programs."
-    },
-    {
-      name: "Pandian",
-      role: "Education Program Manager",
-      image: "/volunters/pandian.jpeg",
-      bio: "Pandian oversees our educational initiatives and scholarship programs for underprivileged students."
-    },
-    {
-      name: "Kannan",
-      role: "Healthcare Initiative Lead",
-      image:"/volunters/pandian.jpeg",
-      bio: "Pandian leads our mobile health clinics and preventive care programs in rural areas."
-    },
-    {
-      name: "Surya",
-      role: "Volunteer Coordinator",
-      image: "/volunters/surya.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-        {
-      name: "Aishwarya K",
-      role: "Volunteer Coordinator",
-      image: "/volunters/aishwarya.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "S MARIMUTHU ",
-      role: "Volunteer Coordinator",
-      image: "/volunters/surya.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Lokesh.p.",
-      role: "Volunteer Coordinator",
-      image: "/volunters/lokesh.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Karan S",
-      role: "Volunteer Coordinator",
-      image: "/volunters/Karan.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "GNANAPRAKASAM E",
-      role: "Volunteer Coordinator",
-      image: "/volunters/gnanaprakasam.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Arvind s",
-      role: "Volunteer Coordinator",
-      image: "/volunters/Arvind.jpeg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Udhayanidhi S",
-      role: "Volunteer Coordinator",
-      image: "/volunters/Udhayanidhi.jpeg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Dhanabal V",
-      role: "Volunteer Coordinator",
-      image: "/volunters/Dhanabal.jpeg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-            {
-      name: "Krishaan",
-      role: "Volunteer Coordinator",
-      image: "/volunters/Krishaan.jpg",
-      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    },
-      {
-      name: "Balamurugan S",
-      role: "Trustee",
-      image: "/volunters/balamurugan.jpg",
-      bio: "Balamurugan Bus Conductor(Metropolitan Transport corporation Ltd)n Ltd our Trustee programs and ensures meaningful engagement opportunities for all supporters."
-    },
-  ];
+const teamMembers = [
+  {
+    name: "Bhaskaran",
+    role: "Founder & President",
+    image: "volunters/bhasky.jpg",
+    bio: "Bhaskaran founded Arjuna Foundation in 2019 with a vision to create sustainable change in underserved communities."
+  },
+  {
+    name: "Arunachalam",
+    role: "Director of Operations",
+    image: "volunters/arunachalam.webp",
+    bio: "With 15 years in nonprofit management, Arunachalam ensures our programs run efficiently and deliver maximum impact."
+  },
+  {
+    name: "Gowtham",
+    role: "Community Outreach Coordinator",
+    image: "asset/gowtham.jpg",
+    bio: "Gowtham builds strong community relationships and tailors outreach initiatives to meet evolving local needs."
+  },
+  {
+    name: "Pandian",
+    role: "Education Program Manager",
+    image: "/volunters/pandian.jpeg",
+    bio: "Pandian oversees our education programs, empowering students through scholarships and learning opportunities."
+  },
+  {
+    name: "Kannan",
+    role: "Healthcare Initiative Lead",
+    image:"/volunters/pandian.jpeg",
+    bio: "Kannan leads health outreach programs, focusing on preventive care and wellness in underserved regions."
+  },
+  {
+    name: "Surya",
+    role: "Volunteer Coordinator",
+    image: "/volunters/surya.jpg",
+    bio: "Surya organizes volunteer efforts, ensuring each individual finds a meaningful way to contribute to our mission."
+  },
+  {
+    name: "Aishwarya K",
+    role: "Volunteer Coordinator",
+    image: "/volunters/aishwarya.jpg",
+    bio: "Aishwarya focuses on volunteer training and engagement, helping build a committed and passionate support network."
+  },
+  {
+    name: "S MARIMUTHU",
+    role: "Volunteer Coordinator",
+    image: "/volunters/surya.jpg",
+    bio: "Marimuthu manages local volunteer logistics and helps facilitate smooth operations during community events."
+  },
+  {
+    name: "Lokesh P",
+    role: "Volunteer Coordinator",
+    image: "/volunters/lokesh.jpg",
+    bio: "Lokesh brings energy and dedication to mobilizing volunteers and organizing outreach initiatives on the ground."
+  },
+  {
+    name: "Karan S",
+    role: "Volunteer Coordinator",
+    image: "/volunters/Karan.jpg",
+    bio: "Karan supports volunteer recruitment and ensures teams are well-equipped for community service activities."
+  },
+  {
+    name: "GNANAPRAKASAM E",
+    role: "Volunteer Coordinator",
+    image: "/volunters/gnanaprakasam.jpg",
+    bio: "Gnanaprakasam oversees event coordination and encourages community members to get involved in our mission."
+  },
+  {
+    name: "Arvind S",
+    role: "Volunteer Coordinator",
+    image: "/volunters/Arvind.jpeg",
+    bio: "Arvind manages day-to-day volunteer schedules and ensures smooth execution of our local projects."
+  },
+  {
+    name: "Udhayanidhi S",
+    role: "Volunteer Coordinator",
+    image: "/volunters/Udhayanidhi.jpeg",
+    bio: "Udhayanidhi helps onboard new volunteers and coordinates efforts for various community initiatives."
+  },
+  {
+    name: "Dhanabal V",
+    role: "Volunteer Coordinator",
+    image: "/volunters/Dhanabal.jpeg",
+    bio: "Dhanabal supports backend volunteer management and assists with event planning and execution."
+  },
+  {
+    name: "Krishaan",
+    role: "Volunteer Coordinator",
+    image: "/volunters/Krishaan.jpg",
+    bio: "Krishaan fosters a spirit of service among youth volunteers and promotes grassroots involvement."
+  },
+  {
+    name: "Balamurugan S",
+    role: "Trustee",
+    image: "/volunters/balamurugan.jpg",
+    bio: "Balamurugan, a Metropolitan Transport Corporation conductor, brings dedication and community insight as a trustee."
+  },
+];
+
 
 function TimelineZigzagItem({
   milestone,
