@@ -42,7 +42,67 @@ export default function About() {
       role: "Volunteer Coordinator",
       image: "/volunters/surya.jpg",
       bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
-    }
+    },
+        {
+      name: "Aishwarya K",
+      role: "Volunteer Coordinator",
+      image: "/volunters/aishwarya.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "S MARIMUTHU ",
+      role: "Volunteer Coordinator",
+      image: "/volunters/surya.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Lokesh.p.",
+      role: "Volunteer Coordinator",
+      image: "/volunters/lokesh.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Karan S",
+      role: "Volunteer Coordinator",
+      image: "/volunters/Karan.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "GNANAPRAKASAM E",
+      role: "Volunteer Coordinator",
+      image: "/volunters/gnanaprakasam.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Arvind s",
+      role: "Volunteer Coordinator",
+      image: "/volunters/Arvind.jpeg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Udhayanidhi S",
+      role: "Volunteer Coordinator",
+      image: "/volunters/Udhayanidhi.jpeg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Dhanabal V",
+      role: "Volunteer Coordinator",
+      image: "/volunters/Dhanabal.jpeg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+            {
+      name: "Krishaan",
+      role: "Volunteer Coordinator",
+      image: "/volunters/Krishaan.jpg",
+      bio: "Surya our volunteer programs and ensures meaningful engagement opportunities for all supporters."
+    },
+      {
+      name: "Balamurugan S",
+      role: "Trustee",
+      image: "/volunters/balamurugan.jpg",
+      bio: "Balamurugan Bus Conductor(Metropolitan Transport corporation Ltd)n Ltd our Trustee programs and ensures meaningful engagement opportunities for all supporters."
+    },
   ];
 
 function TimelineZigzagItem({
@@ -188,7 +248,7 @@ function TimelineZigzagItem({
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
                 <img
@@ -203,7 +263,26 @@ function TimelineZigzagItem({
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+  {teamMembers.map((member, index) => (
+    <div key={index} className="bg-gray-50 rounded-lg overflow-hidden">
+      <div className="aspect-[3/4] w-full overflow-hidden">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h3>
+        <p className="text-blue-600 font-medium mb-3">{member.role}</p>
+        <p className="text-gray-600 text-sm">{member.bio}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
