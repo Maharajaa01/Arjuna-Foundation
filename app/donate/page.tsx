@@ -240,7 +240,7 @@ export default function Donate() {
             </div> */}
                           <div>
                 <img
-                  src="/asset/qr1.jpg"
+                  src="/asset/bank_qr.JPG"
                   alt="Our Vision"
                   className="w-full h-82 object-cover object-top rounded-lg"
                 />
