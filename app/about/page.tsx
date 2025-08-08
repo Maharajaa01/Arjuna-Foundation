@@ -34,7 +34,7 @@ const teamMembers = [
   {
     name: "Kannan",
     role: "Healthcare Initiative Lead",
-    image:"/volunters/Kannan.jpg",
+    image:"/volunters/Kannan1.jpg",
     bio: "Kannan leads health outreach programs, focusing on preventive care and wellness in underserved regions."
   },
   {
@@ -82,7 +82,7 @@ const teamMembers = [
   {
     name: "Udhayanidhi S",
     role: "Volunteer Coordinator",
-    image: "/volunters/Udhayanidhi.jpeg",
+    image: "/volunters/udhayanidhi1.jpeg",
     bio: "Udhayanidhi helps onboard new volunteers and coordinates efforts for various community initiatives."
   },
   {
