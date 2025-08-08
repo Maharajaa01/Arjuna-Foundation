@@ -62,8 +62,8 @@ export const metadata: Metadata = {
     images: ["/asset/af_logo.png"], // Replace with your actual image path
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/asset/af_logo.png",
+    apple: "/asset/af_logo.png",
   },
   themeColor: "#e6d72dff",
 };
